@@ -1,0 +1,122 @@
+import {defineField, defineType} from 'sanity'
+
+export default defineType({
+  name: 'homepage',
+  title: 'Homepage',
+  type: 'document',
+  fields: [
+    defineField({
+      name: 'title',
+      type: 'string',
+      title: 'Title',
+      initialValue: 'Homepage',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'headerHeadline',
+      type: 'string',
+      title: 'Header Headline',
+      initialValue: 'The Mindful Foundation',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'headerSubheadline',
+      type: 'string',
+      title: 'Header Subheadline',
+      initialValue: 'Empowering Lives. Preventing Harm. Healing Futures.',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'mission',
+      type: 'blockContent',
+      title: 'Mission',
+      description: 'Brief mission statement',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'intro',
+      type: 'blockContent',
+      title: 'Intro',
+      description: 'Introductory rich text content',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'strandsSectionTitle',
+      type: 'string',
+      title: 'Our Work – Section Title',
+      initialValue: 'Our Work – Three Core Strands',
+    }),
+    defineField({
+      name: 'strands',
+      type: 'array',
+      title: 'Strands',
+      of: [{type: 'strandItem'}],
+      validation: (Rule) => Rule.min(1).max(3),
+    }),
+    defineField({
+      name: 'whyItMattersTitle',
+      type: 'string',
+      title: 'Why It Matters – Title',
+      initialValue: 'Why It Matters',
+    }),
+    defineField({
+      name: 'stats',
+      type: 'array',
+      title: 'Statistics',
+      of: [{type: 'stat'}],
+      validation: (Rule) => Rule.min(1),
+    }),
+    defineField({
+      name: 'whyItMattersFootnote',
+      type: 'text',
+      title: 'Why It Matters – Footnote',
+      description: 'Closing sentence under stats',
+    }),
+    defineField({
+      name: 'testimonialsTitle',
+      type: 'string',
+      title: 'Testimonials – Title',
+      initialValue: 'Testimonials',
+    }),
+    defineField({
+      name: 'testimonials',
+      type: 'array',
+      title: 'Testimonials',
+      of: [{type: 'testimonial'}],
+      validation: (Rule) => Rule.min(1),
+    }),
+    defineField({
+      name: 'callToActionTitle',
+      type: 'string',
+      title: 'Call to Action – Title',
+      initialValue: 'Together, we can build safer futures.',
+    }),
+    defineField({
+      name: 'primaryCta',
+      type: 'cta',
+      title: 'Primary CTA',
+      description: 'e.g., Contact Us',
+    }),
+    defineField({
+      name: 'secondaryCta',
+      type: 'cta',
+      title: 'Secondary CTA',
+      description: 'e.g., Download Info Pack',
+    }),
+    defineField({
+      name: 'infoPack',
+      type: 'file',
+      title: 'Info Pack PDF',
+      options: {storeOriginalFilename: true},
+    }),
+    defineField({
+      name: 'seo',
+      type: 'seo',
+      title: 'SEO',
+      description: 'Overrides default SEO for this page',
+    }),
+  ],
+  preview: {
+    select: {title: 'title'},
+  },
+})
