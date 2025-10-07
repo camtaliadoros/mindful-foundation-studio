@@ -17,11 +17,18 @@ export default defineType({
       title: 'Description',
       rows: 3,
     }),
+
     defineField({
-      name: 'href',
-      type: 'url',
-      title: 'Link URL',
-      description: 'External or internal URL',
+      name: 'internalLink',
+      type: 'reference',
+      title: 'Internal Page',
+      to: [{type: 'homepage'}, {type: 'aboutPage'}],
+      description: 'Reference to an internal page',
     }),
   ],
+  validation: (Rule) =>
+    Rule.custom((fields) => {
+      if (fields?.href || fields?.internalLink) return true
+      return 'Provide either Link URL or Internal Page'
+    }),
 })
