@@ -108,7 +108,7 @@ export default defineType({
       name: 'advisoryBoard',
       type: 'array',
       title: 'Advisory Board',
-      of: [{type: 'string'}],
+      of: [{type: 'linkableLogo'}],
     }),
     // ListenApp Partners
     defineField({
