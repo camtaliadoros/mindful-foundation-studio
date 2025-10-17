@@ -1,20 +1,20 @@
 import blockContent from './objects/blockContent'
-import testimonial from './objects/testimonial'
 import cta from './objects/cta'
-import strandItem from './objects/strandItem'
-import stat from './objects/stat'
-import seo from './objects/seo'
 import linkableLogo from './objects/linkableLogo'
 import module from './objects/module'
+import seo from './objects/seo'
+import stat from './objects/stat'
+import strandItem from './objects/strandItem'
+import testimonial from './objects/testimonial'
 
-import homepage from './pages/homepage'
-import siteSettings from './pages/siteSettings'
 import aboutPage from './pages/aboutPage'
-import thinkDifferentPage from './pages/thinkDifferentPage'
+import articles from './pages/articles'
+import homepage from './pages/homepage'
 import listenAppPage from './pages/listenAppPage'
+import newsPage from './pages/newsPage'
 import perpetratorProgrammePage from './pages/perpetratorProgrammePage'
-import blogPost from './pages/blogPost'
-import blogPage from './pages/blogPage'
+import siteSettings from './pages/siteSettings'
+import thinkDifferentPage from './pages/thinkDifferentPage'
 
 export const schemaTypes = [
   // Reusable objects
@@ -29,11 +29,11 @@ export const schemaTypes = [
 
   // Documents
   homepage,
-  siteSettings,
   aboutPage,
   thinkDifferentPage,
   listenAppPage,
   perpetratorProgrammePage,
-  blogPost,
-  blogPage,
+  newsPage,
+  articles,
+  siteSettings,
 ]

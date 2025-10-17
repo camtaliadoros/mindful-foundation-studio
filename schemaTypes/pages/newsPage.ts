@@ -1,8 +1,8 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'blogPage',
-  title: 'Blog Page',
+  name: 'newsPage',
+  title: 'News Page',
   type: 'document',
   fields: [
     defineField({
