@@ -12,6 +12,9 @@ import siteSettings from './pages/siteSettings'
 import aboutPage from './pages/aboutPage'
 import thinkDifferentPage from './pages/thinkDifferentPage'
 import listenAppPage from './pages/listenAppPage'
+import perpetratorProgrammePage from './pages/perpetratorProgrammePage'
+import blogPost from './pages/blogPost'
+import blogPage from './pages/blogPage'
 
 export const schemaTypes = [
   // Reusable objects
@@ -30,4 +33,7 @@ export const schemaTypes = [
   aboutPage,
   thinkDifferentPage,
   listenAppPage,
+  perpetratorProgrammePage,
+  blogPost,
+  blogPage,
 ]
