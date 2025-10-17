@@ -104,12 +104,6 @@ export default defineType({
       description: 'e.g., Download Info Pack',
     }),
     defineField({
-      name: 'infoPack',
-      type: 'file',
-      title: 'Info Pack PDF',
-      options: {storeOriginalFilename: true},
-    }),
-    defineField({
       name: 'seo',
       type: 'seo',
       title: 'SEO',

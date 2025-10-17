@@ -5,10 +5,12 @@ import strandItem from './objects/strandItem'
 import stat from './objects/stat'
 import seo from './objects/seo'
 import linkableLogo from './objects/linkableLogo'
+import module from './objects/module'
 
 import homepage from './pages/homepage'
 import siteSettings from './pages/siteSettings'
 import aboutPage from './pages/aboutPage'
+import thinkDifferentPage from './pages/thinkDifferentPage'
 
 export const schemaTypes = [
   // Reusable objects
@@ -19,9 +21,11 @@ export const schemaTypes = [
   stat,
   seo,
   linkableLogo,
+  module,
 
   // Documents
   homepage,
   siteSettings,
   aboutPage,
+  thinkDifferentPage,
 ]
