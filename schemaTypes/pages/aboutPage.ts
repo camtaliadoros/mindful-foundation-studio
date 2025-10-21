@@ -113,6 +113,22 @@ export default defineType({
       title: 'The Team — Content',
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: 'teamImage',
+      type: 'image',
+      title: 'The Team — Image',
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative text',
+          description: 'Important for SEO and accessibility',
+        },
+      ],
+    }),
     // Advisory Board
     defineField({
       name: 'advisoryBoardTitle',
