@@ -54,6 +54,22 @@ export default defineType({
       title: 'Our Mission — Text',
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: 'missionImage',
+      type: 'image',
+      title: 'Our Mission — Image',
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative text',
+          description: 'Important for SEO and accessibility',
+        },
+      ],
+    }),
     // Approach
     defineField({
       name: 'approachTitle',
