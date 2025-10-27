@@ -9,6 +9,7 @@ import testimonial from './objects/testimonial'
 
 import aboutPage from './pages/aboutPage'
 import articles from './pages/articles'
+import CTABlock from './pages/CTABlock'
 import homepage from './pages/homepage'
 import listenAppPage from './pages/listenAppPage'
 import newsPage from './pages/newsPage'
@@ -35,5 +36,6 @@ export const schemaTypes = [
   perpetratorProgrammePage,
   newsPage,
   articles,
+  CTABlock,
   siteSettings,
 ]
