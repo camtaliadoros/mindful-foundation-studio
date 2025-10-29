@@ -75,7 +75,33 @@ export default defineType({
       name: 'whyDifferentApproaches',
       type: 'array',
       title: 'Approaches Used',
-      of: [{type: 'string'}],
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'title',
+              type: 'string',
+              title: 'Title',
+              validation: (Rule) => Rule.required(),
+            },
+            {
+              name: 'icon',
+              type: 'image',
+              title: 'Icon',
+              options: {
+                hotspot: true,
+              },
+            },
+          ],
+          preview: {
+            select: {
+              title: 'title',
+              media: 'icon',
+            },
+          },
+        },
+      ],
       validation: (Rule) => Rule.min(1),
     }),
 
