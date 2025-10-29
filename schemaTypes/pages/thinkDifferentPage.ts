@@ -35,6 +35,22 @@ export default defineType({
       title: 'Overview',
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: 'overviewImage',
+      type: 'image',
+      title: 'Overview — Image',
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative text',
+          description: 'Important for SEO and accessibility',
+        },
+      ],
+    }),
 
     // Why It's Different
     defineField({
