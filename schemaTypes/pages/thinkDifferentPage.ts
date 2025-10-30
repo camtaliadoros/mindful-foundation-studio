@@ -147,6 +147,23 @@ export default defineType({
       validation: (Rule) => Rule.min(1),
     }),
 
+    defineField({
+      name: 'courseAimsImage',
+      type: 'image',
+      title: 'Course Aims — Image',
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative text',
+          description: 'Important for SEO and accessibility',
+        },
+      ],
+    }),
+
     // Impact So Far
     defineField({
       name: 'impactTitle',
