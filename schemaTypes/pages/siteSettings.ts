@@ -27,6 +27,12 @@ export default defineType({
       type: 'string',
       title: 'Twitter Handle',
     }),
+    defineField({
+      name: 'donateButton',
+      type: 'donateButton',
+      title: 'Header Donate Button',
+      description: 'Donate button configuration for the header menu. Button will be hidden if no link is provided.',
+    }),
   ],
   preview: {select: {title: 'siteName'}},
 })

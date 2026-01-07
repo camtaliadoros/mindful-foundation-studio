@@ -1,5 +1,6 @@
 import blockContent from './objects/blockContent'
 import cta from './objects/cta'
+import donateButton from './objects/donateButton'
 import linkableLogo from './objects/linkableLogo'
 import module from './objects/module'
 import seo from './objects/seo'
@@ -22,6 +23,7 @@ export const schemaTypes = [
   blockContent,
   testimonial,
   cta,
+  donateButton,
   strandItem,
   stat,
   seo,
