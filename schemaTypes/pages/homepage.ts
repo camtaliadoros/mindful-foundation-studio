@@ -27,6 +27,23 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'heroImage',
+      type: 'image',
+      title: 'Hero Section Image',
+      description: 'Background image for the hero section',
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        defineField({
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative Text',
+          description: 'Important for SEO and accessibility',
+        }),
+      ],
+    }),
+    defineField({
       name: 'mission',
       type: 'blockContent',
       title: 'Mission',
