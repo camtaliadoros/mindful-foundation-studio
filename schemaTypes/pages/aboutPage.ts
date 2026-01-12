@@ -151,9 +151,10 @@ export default defineType({
     }),
     defineField({
       name: 'listenAppPartners',
-      type: 'array',
-      title: 'ListenApp Partners',
-      of: [{type: 'linkableLogo'}],
+      type: 'reference',
+      title: 'ListenApp Partners — Logo Section',
+      to: [{type: 'logoSection'}],
+      description: 'Select a logo section document',
     }),
     defineField({
       name: 'specialThanksTitle',
@@ -163,9 +164,10 @@ export default defineType({
     }),
     defineField({
       name: 'specialThanks',
-      type: 'array',
-      title: 'Special Thanks',
-      of: [{type: 'linkableLogo'}],
+      type: 'reference',
+      title: 'Special Thanks — Logo Section',
+      to: [{type: 'logoSection'}],
+      description: 'Select a logo section document',
     }),
     // SEO overrides
     defineField({

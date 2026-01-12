@@ -98,6 +98,26 @@ export default defineType({
       description: 'Information about ListenApp partners and supporters',
     }),
     defineField({
+      name: 'listenAppPartners',
+      type: 'reference',
+      title: 'ListenApp Partners — Logo Section',
+      to: [{type: 'logoSection'}],
+      description: 'Select a logo section document for ListenApp partners',
+    }),
+    defineField({
+      name: 'specialThanksTitle',
+      type: 'string',
+      title: 'Special Thanks Title',
+      initialValue: 'Special Thanks',
+    }),
+    defineField({
+      name: 'specialThanks',
+      type: 'reference',
+      title: 'Special Thanks — Logo Section',
+      to: [{type: 'logoSection'}],
+      description: 'Select a logo section document for special thanks',
+    }),
+    defineField({
       name: 'callToActionTitle',
       type: 'string',
       title: 'Call to Action Title',

@@ -13,6 +13,7 @@ import articles from './pages/articles'
 import CTABlock from './pages/CTABlock'
 import homepage from './pages/homepage'
 import listenAppPage from './pages/listenAppPage'
+import logoSection from './pages/logoSection'
 import newsPage from './pages/newsPage'
 import perpetratorProgrammePage from './pages/perpetratorProgrammePage'
 import siteSettings from './pages/siteSettings'
@@ -40,4 +41,5 @@ export const schemaTypes = [
   articles,
   CTABlock,
   siteSettings,
+  logoSection,
 ]
