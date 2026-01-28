@@ -1,15 +1,22 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'cta',
-  title: 'Call To Action',
-  type: 'object',
+  name: 'articleCTA',
+  title: 'Article CTA',
+  type: 'document',
   fields: [
+    defineField({
+      name: 'title',
+      type: 'string',
+      title: 'Title',
+      description: 'Internal title for this CTA (for CMS organization)',
+      validation: (Rule) => Rule.required(),
+    }),
     defineField({
       name: 'label',
       type: 'string',
-      title: 'Label',
-      description: 'Optional - leave empty if you don\'t want a CTA',
+      title: 'Button Label',
+      description: 'Text displayed on the button',
     }),
     defineField({
       name: 'actionType',
@@ -23,7 +30,6 @@ export default defineType({
         ],
       },
       initialValue: 'url',
-      description: 'Optional - leave empty if you don\'t want a CTA',
     }),
     defineField({
       name: 'href',
@@ -84,4 +90,19 @@ export default defineType({
       initialValue: 'primary',
     }),
   ],
+  preview: {
+    select: {
+      title: 'title',
+      label: 'label',
+      actionType: 'actionType',
+    },
+    prepare({title, label, actionType}) {
+      return {
+        title: title || 'Untitled Article CTA',
+        subtitle: label
+          ? `${label} (${actionType || 'url'})`
+          : 'No label set',
+      }
+    },
+  },
 })

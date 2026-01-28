@@ -10,6 +10,7 @@ import testimonial from './objects/testimonial'
 
 import aboutPage from './pages/aboutPage'
 import articles from './pages/articles'
+import articleCTA from './pages/articleCTA'
 import CTABlock from './pages/CTABlock'
 import homepage from './pages/homepage'
 import listenAppPage from './pages/listenAppPage'
@@ -42,4 +43,5 @@ export const schemaTypes = [
   CTABlock,
   siteSettings,
   logoSection,
+  articleCTA,
 ]

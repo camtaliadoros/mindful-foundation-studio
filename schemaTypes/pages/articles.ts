@@ -120,9 +120,10 @@ export default defineType({
     }),
     defineField({
       name: 'cta',
-      type: 'cta',
+      type: 'reference',
       title: 'Call to Action (Optional)',
-      description: 'Optional CTA at the end of the article',
+      description: 'Optional CTA at the end of the article. Select an existing CTA or create a new one.',
+      to: [{type: 'articleCTA'}],
     }),
     defineField({
       name: 'seo',
