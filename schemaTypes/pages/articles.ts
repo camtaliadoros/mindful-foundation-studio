@@ -119,10 +119,10 @@ export default defineType({
       validation: (Rule) => Rule.max(3),
     }),
     defineField({
-      name: 'cta',
+      name: 'articleCTA',
       type: 'reference',
       title: 'Call to Action (Optional)',
-      description: 'Optional CTA at the end of the article. Select an existing CTA or create a new one.',
+      description: 'Optional CTA at the end of the article. Select an existing Article CTA or create a new one.',
       to: [{type: 'articleCTA'}],
     }),
     defineField({
