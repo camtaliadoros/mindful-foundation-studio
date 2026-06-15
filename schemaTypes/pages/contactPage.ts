@@ -44,6 +44,22 @@ export default defineType({
       initialValue: 'info@themindfulfoundation.org',
       validation: (Rule) => Rule.required().email(),
     }),
+    // Success message
+    defineField({
+      name: 'successHeading',
+      type: 'string',
+      title: 'Success Heading',
+      description: 'Shown after the form is submitted successfully.',
+      initialValue: 'Message sent',
+    }),
+    defineField({
+      name: 'successMessage',
+      type: 'text',
+      rows: 2,
+      title: 'Success Message',
+      description: 'Body text shown after the form is submitted successfully.',
+      initialValue: 'Thank you for reaching out. We aim to respond within 2-3 working days.',
+    }),
     // SEO
     defineField({
       name: 'seo',
