@@ -19,6 +19,7 @@ import newsPage from './pages/newsPage'
 import perpetratorProgrammePage from './pages/perpetratorProgrammePage'
 import siteSettings from './pages/siteSettings'
 import thinkDifferentPage from './pages/thinkDifferentPage'
+import contactPage from './pages/contactPage'
 
 export const schemaTypes = [
   // Reusable objects
@@ -44,4 +45,5 @@ export const schemaTypes = [
   siteSettings,
   logoSection,
   articleCTA,
+  contactPage,
 ]
