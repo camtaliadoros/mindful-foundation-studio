@@ -91,13 +91,6 @@ export default defineType({
           type: 'image',
           title: 'Open Graph Image',
           options: {hotspot: true},
-          fields: [
-            defineField({
-              name: 'asset',
-              type: 'reference',
-              to: [{type: 'sanity.imageAsset'}],
-            }),
-          ],
         }),
       ],
     }),
