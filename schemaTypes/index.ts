@@ -20,6 +20,7 @@ import perpetratorProgrammePage from './pages/perpetratorProgrammePage'
 import siteSettings from './pages/siteSettings'
 import thinkDifferentPage from './pages/thinkDifferentPage'
 import contactPage from './pages/contactPage'
+import donatePage from './pages/donatePage'
 
 export const schemaTypes = [
   // Reusable objects
@@ -46,4 +47,5 @@ export const schemaTypes = [
   logoSection,
   articleCTA,
   contactPage,
+  donatePage,
 ]
