@@ -1,7 +1,9 @@
 import {defineField, defineType} from 'sanity'
 
+// Note: the document type is `blogPage` (not `newsPage`) because that is the
+// type the live content was authored under, and what the website queries.
 export default defineType({
-  name: 'newsPage',
+  name: 'blogPage',
   title: 'News Page',
   type: 'document',
   fields: [
