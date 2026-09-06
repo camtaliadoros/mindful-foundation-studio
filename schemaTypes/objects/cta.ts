@@ -17,13 +17,41 @@ export default defineType({
       title: 'Action Type',
       options: {
         list: [
+          {title: 'Internal Page', value: 'internal'},
           {title: 'Link to URL', value: 'url'},
           {title: 'Email Link', value: 'email'},
           {title: 'PDF Download', value: 'pdf'},
         ],
       },
-      initialValue: 'url',
+      initialValue: 'internal',
       description: 'Optional - leave empty if you don\'t want a CTA',
+    }),
+    defineField({
+      name: 'internalLink',
+      type: 'reference',
+      title: 'Page',
+      description: 'The page on this site to link to.',
+      hidden: ({parent}) => parent?.actionType !== 'internal',
+      to: [
+        {type: 'homepage'},
+        {type: 'aboutPage'},
+        {type: 'thinkDifferentPage'},
+        {type: 'listenAppPage'},
+        {type: 'perpetratorProgrammePage'},
+        {type: 'blogPage'},
+        {type: 'contactPage'},
+        {type: 'donatePage'},
+        {type: 'blogPost'},
+      ],
+      validation: (Rule) =>
+        Rule.custom((value, context) => {
+          const actionType = (context.parent as any)?.actionType
+          const label = (context.parent as any)?.label
+          if (label && actionType === 'internal' && !value) {
+            return 'Please choose a page when action type is "Internal Page"'
+          }
+          return true
+        }),
     }),
     defineField({
       name: 'href',
