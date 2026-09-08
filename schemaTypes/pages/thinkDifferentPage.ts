@@ -22,6 +22,45 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
 
+    // Hero Banner (shown directly below the hero)
+    defineField({
+      name: 'heroBanner',
+      title: 'Hero Banner (below hero)',
+      type: 'object',
+      description: 'Key stats, an enquiry button, and a signpost shown just under the hero.',
+      options: {collapsible: true, collapsed: false},
+      fields: [
+        defineField({
+          name: 'stats',
+          title: 'Key Stats',
+          type: 'array',
+          of: [{type: 'string'}],
+          description:
+            'Each stat is shown separated by a divider, e.g. "1,600+ children and young people supported".',
+        }),
+        defineField({
+          name: 'enquiryCta',
+          title: 'Enquiry Button',
+          type: 'cta',
+          description: 'The call-to-action button, e.g. "Enquire about Think Different for your school".',
+        }),
+        defineField({
+          name: 'signpostText',
+          title: 'Signpost Text',
+          type: 'string',
+          description:
+            'Lead-in text before the signpost link, e.g. "Worried about someone in an abusive relationship?".',
+        }),
+        defineField({
+          name: 'signpostLink',
+          title: 'Signpost Link',
+          type: 'cta',
+          description:
+            'The link shown after the signpost text, e.g. "ListenApp offers discreet, immediate support" linking to the ListenApp page.',
+        }),
+      ],
+    }),
+
     // Overview
     defineField({
       name: 'overviewHeadline',
