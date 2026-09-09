@@ -34,9 +34,9 @@ export default defineType({
           name: 'stats',
           title: 'Key Stats',
           type: 'array',
-          of: [{type: 'string'}],
+          of: [{type: 'stat'}],
           description:
-            'Each stat is shown separated by a divider, e.g. "1,600+ children and young people supported".',
+            'Each stat shows a large value and a label, e.g. value "1,600+" with label "children and young people supported". A trailing "+" in the value is shown in green.',
         }),
         defineField({
           name: 'enquiryCta',
@@ -46,17 +46,24 @@ export default defineType({
         }),
         defineField({
           name: 'signpostText',
-          title: 'Signpost Text',
+          title: 'Signpost Heading',
           type: 'string',
           description:
-            'Lead-in text before the signpost link, e.g. "Worried about someone in an abusive relationship?".',
+            'The heading of the signpost band, e.g. "Worried about someone in an abusive relationship?".',
+        }),
+        defineField({
+          name: 'signpostSubtext',
+          title: 'Signpost Subtext',
+          type: 'string',
+          description:
+            'The smaller text under the heading, e.g. "ListenApp offers discreet, immediate support.".',
         }),
         defineField({
           name: 'signpostLink',
-          title: 'Signpost Link',
+          title: 'Signpost Button',
           type: 'cta',
           description:
-            'The link shown after the signpost text, e.g. "ListenApp offers discreet, immediate support" linking to the ListenApp page.',
+            'The button in the signpost band, e.g. "Open ListenApp" linking to the ListenApp page.',
         }),
       ],
     }),
