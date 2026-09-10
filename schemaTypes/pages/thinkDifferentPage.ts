@@ -224,6 +224,13 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'impactOutcomesLabel',
+      type: 'string',
+      title: 'Impact — Outcomes Label',
+      description: 'Heading shown above the list of measured outcomes.',
+      initialValue: 'Measured outcomes included',
+    }),
+    defineField({
       name: 'impactOutcomes',
       type: 'array',
       title: 'Measured Outcomes',
@@ -231,10 +238,59 @@ export default defineType({
       validation: (Rule) => Rule.min(1),
     }),
     defineField({
+      name: 'impactRipple',
+      type: 'object',
+      title: 'Impact — Ripple Quote',
+      description: 'The two-part chant pull-quote and its caption.',
+      options: {collapsible: true, collapsed: false},
+      fields: [
+        defineField({
+          name: 'before',
+          type: 'string',
+          title: 'Chant — Before',
+          description: 'e.g. "I can do it!"',
+        }),
+        defineField({
+          name: 'after',
+          type: 'string',
+          title: 'Chant — After',
+          description: 'e.g. "You can do it!"',
+        }),
+        defineField({
+          name: 'caption',
+          type: 'text',
+          rows: 3,
+          title: 'Caption',
+        }),
+      ],
+    }),
+    defineField({
       name: 'impactStories',
       type: 'blockContent',
       title: 'Impact Stories & Examples',
       validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'impactSupport',
+      type: 'object',
+      title: 'Impact — Supporter Panel',
+      description: 'The donate prompt shown at the end of the Impact section.',
+      options: {collapsible: true, collapsed: false},
+      fields: [
+        defineField({
+          name: 'heading',
+          type: 'string',
+          title: 'Heading',
+          initialValue:
+            'Moments like these are only possible because of our supporters.',
+        }),
+        defineField({
+          name: 'cta',
+          type: 'cta',
+          title: 'Button',
+          description: 'e.g. "Donate to help us reach more children" linking to the Donate page.',
+        }),
+      ],
     }),
 
     // Training for Educators & Staff
