@@ -341,37 +341,9 @@ export default defineType({
     }),
     defineField({
       name: 'trainingButton',
-      type: 'object',
+      type: 'cta',
       title: 'Training Button',
-      description: 'Email button after the Training section content',
-      fields: [
-        defineField({
-          name: 'label',
-          type: 'string',
-          title: 'Button Label',
-          validation: (Rule) => Rule.required(),
-        }),
-        defineField({
-          name: 'emailSubject',
-          type: 'string',
-          title: 'Email Subject',
-          description: 'Subject line for the email',
-          validation: (Rule) => Rule.required(),
-        }),
-        defineField({
-          name: 'emailAddress',
-          type: 'email',
-          title: 'Email Address',
-          description: 'Recipient email address',
-          validation: (Rule) => Rule.required(),
-        }),
-      ],
-      preview: {
-        select: {
-          title: 'label',
-          subtitle: 'emailAddress',
-        },
-      },
+      description: 'Button after the Training section content (e.g. linking to the Contact page).',
     }),
 
     // Call to Action
