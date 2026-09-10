@@ -36,6 +36,34 @@ export default defineType({
       description: 'Description of what ListenApp is and how it works',
     }),
     defineField({
+      name: 'whatItIsCta',
+      type: 'cta',
+      title: 'What It Is — Button',
+      description: 'Primary action shown under the What It Is text, e.g. "Request Access".',
+    }),
+    defineField({
+      name: 'whatItIsSignpost',
+      type: 'object',
+      title: 'What It Is — Signpost',
+      description: 'Quiet signpost for a different audience (e.g. pointing to Think Different).',
+      options: {collapsible: true, collapsed: false},
+      fields: [
+        defineField({
+          name: 'text',
+          type: 'string',
+          title: 'Signpost Text',
+          description: 'Lead-in text, e.g. "Supporting a young person instead?".',
+        }),
+        defineField({
+          name: 'cta',
+          type: 'cta',
+          title: 'Signpost Link',
+          description:
+            'The link, e.g. "Think Different helps schools and families address this early" pointing to the Think Different page.',
+        }),
+      ],
+    }),
+    defineField({
       name: 'whyItMattersTitle',
       type: 'string',
       title: 'Why It Matters Title',
