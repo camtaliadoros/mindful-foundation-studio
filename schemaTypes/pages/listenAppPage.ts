@@ -165,6 +165,27 @@ export default defineType({
       description: 'e.g., Visit ListenApp Website',
     }),
     defineField({
+      name: 'donatePrompt',
+      type: 'object',
+      title: 'Donation Prompt',
+      description: 'Donation line and button shown at the bottom of the page.',
+      options: {collapsible: true, collapsed: false},
+      fields: [
+        defineField({
+          name: 'text',
+          type: 'string',
+          title: 'Text',
+          description: 'e.g. "Every donation helps us reach more people who need this support."',
+        }),
+        defineField({
+          name: 'cta',
+          type: 'cta',
+          title: 'Button',
+          description: 'e.g. "Donate" linking to the Donate page.',
+        }),
+      ],
+    }),
+    defineField({
       name: 'seo',
       type: 'seo',
       title: 'SEO',
