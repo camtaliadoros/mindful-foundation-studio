@@ -115,6 +115,12 @@ export default defineType({
       description: 'e.g., Contact Us',
     }),
     defineField({
+      name: 'secondaryCta',
+      type: 'cta',
+      title: 'Secondary CTA',
+      description: 'e.g., Enquire Now',
+    }),
+    defineField({
       name: 'seo',
       type: 'seo',
       title: 'SEO',
