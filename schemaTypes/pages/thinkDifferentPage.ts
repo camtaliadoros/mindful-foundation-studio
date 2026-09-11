@@ -238,33 +238,6 @@ export default defineType({
       validation: (Rule) => Rule.min(1),
     }),
     defineField({
-      name: 'impactRipple',
-      type: 'object',
-      title: 'Impact — Ripple Quote',
-      description: 'The two-part chant pull-quote and its caption.',
-      options: {collapsible: true, collapsed: false},
-      fields: [
-        defineField({
-          name: 'before',
-          type: 'string',
-          title: 'Chant — Before',
-          description: 'e.g. "I can do it!"',
-        }),
-        defineField({
-          name: 'after',
-          type: 'string',
-          title: 'Chant — After',
-          description: 'e.g. "You can do it!"',
-        }),
-        defineField({
-          name: 'caption',
-          type: 'text',
-          rows: 3,
-          title: 'Caption',
-        }),
-      ],
-    }),
-    defineField({
       name: 'impactStories',
       type: 'blockContent',
       title: 'Impact Stories & Examples',
